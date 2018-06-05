@@ -12,7 +12,7 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
-  image
+  image,
 }) => {
   const PostContent = contentComponent || Content
 
@@ -48,7 +48,7 @@ export const BlogPostTemplate = ({
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.string.isRequired,
-  image: PropTypes.string,
+  //image: PropTypes.string,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
@@ -57,11 +57,10 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
-
   return (
     <BlogPostTemplate
       content={post.html}
-      image={post.frontmatter.image}
+      //image={post.frontmatter.image}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
       helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}

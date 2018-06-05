@@ -8,7 +8,7 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-    //console.log(posts)
+    console.log(posts)
     return (
       <section className="section">
         <div className="container">
@@ -69,6 +69,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            image
             templateKey
             date(formatString: "MMMM DD, YYYY")
           }

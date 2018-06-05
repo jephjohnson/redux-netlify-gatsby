@@ -21,7 +21,7 @@ class Carousel extends Component {
   
   renderSlides () {
     const product = this.props.data
-    console.log(product)
+    //console.log(product)
     return product.map(({ node: post}, index) => {
       const { count } = this.props;
       let isShown = index === count
