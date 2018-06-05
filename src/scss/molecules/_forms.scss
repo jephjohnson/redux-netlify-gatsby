@@ -1,0 +1,21 @@
+.zipcode-form {
+  input {
+    height: 3rem;
+    padding: 1rem;
+    width: 100%;
+  }   
+}
+
+.overlay__content {
+  input {
+    min-width: 25rem;
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    font-size: rem(16);
+    opacity: 0.5;
+  }
+
+  input[type="text"] {
+    font-size: rem(16);
+  }
+}

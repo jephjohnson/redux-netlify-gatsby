@@ -1,0 +1,51 @@
+.btn {
+  color: white;
+  display: inline;
+  display: flex;
+  float: left;
+  align-items: center;
+  
+  span {
+    height: 1rem;
+    width: 1rem;
+    position: relative;
+    left: 0.5rem;
+    transition: left 0.1s ease-in;
+
+    img {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &:hover{
+    
+    span {
+      left: 0.75rem;
+    }
+  }
+
+  &-reg {
+    padding: 0 rem(40);
+    height: rem(48);
+    background: $primary-color;
+  }
+
+  &-lg {
+    padding: 0 rem(72);
+    height: rem(72);
+    background: $primary-color;
+  }
+
+  &--transparent {
+    background: rgba(0,56,107,0.9);
+  }
+}
+
+.text-btn, .text-btn__video {
+  color: $primary-color;
+  display: flex;
+
+  span {
+    margin-left: 0.5rem;
+  }
+}

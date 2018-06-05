@@ -1,0 +1,143 @@
+.item {
+  width: 100%;
+  flex-shrink: 0;
+  z-index: 0;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+
+  &:nth-child(1) {
+    margin-top: -9rem;
+    height: rem(264);
+    max-width: rem(374);
+  }
+
+  &:nth-child(2), &:nth-child(8) {
+    align-self: flex-end;
+    margin-top: -12rem;
+    z-index: -1;
+    height: rem(673);
+
+    .card-item__content {
+      top: 75%;
+      transform: translateY(75%);
+    }
+  }
+
+  &:nth-child(2) {
+    height: rem(682);
+  }
+
+  &:nth-child(3), &:nth-child(4), &:nth-child(6) {
+    height: rem(360);
+  }
+
+  &:nth-child(8), &:nth-child(9) {
+    height: rem(433);
+  }
+
+  &:nth-child(3) {
+    margin-top: -15rem;
+    margin-right: auto;
+  }
+
+  &:nth-child(4) {
+    margin-top: -5rem;
+  }
+
+  &:nth-child(5) {
+    height: rem(676);
+    margin-right: auto;
+    margin-top: -10rem;
+
+    .card-item__content {
+      top: 135%;
+      transform: translateY(135%);
+    }
+  }
+
+  &:nth-child(6) {
+    margin-top: -4rem;
+  }
+  
+  &:nth-child(8) {
+    margin-top: -40rem;
+    margin-right: auto;
+    z-index: 1;
+    
+    &.col-xs-offset-1 {
+      margin-left: 3%;
+    }
+  }
+
+  &:nth-child(7) {
+    margin-top: -5rem;
+    z-index: -2;
+    height: rem(682);
+
+    .card-item__content {
+      top: 150%;
+      transform: translateY(150%);
+    }
+  }
+
+  &:nth-child(9) {
+    margin-top: -4rem;
+    z-index: -1;
+    margin-right: auto;
+  }
+}
+
+.card-item {
+  width: 100%;
+  padding: 0;
+  height: inherit;
+  height: -moz-available; //-webkit-fill-available;
+  background-size: cover;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+
+  &__bar {
+    width: 100%;
+    height: 0.5rem;
+  }
+
+  &__content {
+    max-width: 28rem;
+    -webkit-font-smoothing: subpixel-antialiased;
+
+    .row {
+      text-align: left;
+    }
+    
+    pre {
+      @extend h1;
+      line-height: 2rem;
+      padding-bottom: rem(24);
+    }
+
+    a {
+      color: white;
+      margin-top: 1.875rem;
+      display: flex;
+      align-items: center;
+    }
+
+    span {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.card-item__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 3;
+}
+
+.rellax {
+  //transition: transform 30s ease-out(0, 1.5, 0, 1);
+  transition-timing-function: ease-in;
+}

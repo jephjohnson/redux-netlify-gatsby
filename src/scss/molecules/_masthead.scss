@@ -1,0 +1,62 @@
+.masthead {
+  padding: 0.5rem 0;
+  background: white;
+  position: relative;
+  z-index: 4;
+}
+
+.country-code {
+  display: flex;
+  align-items: center;
+
+  .a-small {
+    margin-top: 0.25rem;
+
+    &--underline {
+      margin: 0.25rem 1.5rem 0 1.5rem;
+    }
+  }
+
+  img {
+    max-width: 1rem;
+    margin: 0 0.35rem;
+  }
+
+  .arrow-down {
+    font-size: 1.5rem;
+    transform: rotate(90deg);
+    margin-left: 0.25rem;
+    margin-top: 0.15rem
+  }
+}
+
+.text-resize {
+  margin-right: 2rem;
+
+  p {
+    display: inline;
+    padding-right: 0.5rem;
+  }
+
+  span {
+    &:nth-child(1) {
+      font-size: 0.75rem;
+    }
+    &:nth-child(2) {
+      font-size: 0.85rem;
+    }
+    &:nth-child(3) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.shop-now {
+  color: $primary-color;
+  display: none;
+}

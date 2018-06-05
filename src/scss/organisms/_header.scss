@@ -1,0 +1,59 @@
+.header {
+  width: 100%;
+  
+
+  &__wrapper {
+    padding: 1rem 0;
+    background:$secondary-color-1;
+    position: relative;
+    z-index: 4;
+  }
+}
+
+.top-nav-bar {
+  padding: 0.75rem 1rem;
+}
+
+.country-code {
+  img {
+    max-width: 1rem;
+  }
+}
+
+.logo-link {
+  img {
+    max-width: 7rem;
+  }
+}
+
+.logo-portal {
+  &:after {
+    left: 0.5rem;
+    top: 0.65rem;
+    position: relative;
+    @include arrow(down, 0.35rem, $primary-color); 
+  }
+}
+
+.logo-audience {
+  span {
+    transform: rotate(70deg);
+    transform: rotate(-90deg);
+    display: inline-block;
+    position: relative;
+    left: 1rem;
+    
+    &:after {
+      @include arrow(down, 0.35rem, $primary-color);
+    }
+  }
+}
+
+.search-nav {
+  max-width: 2rem;
+  display: inline-block;
+}
+
+.search-nav {
+  display: none;
+}

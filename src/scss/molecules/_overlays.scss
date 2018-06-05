@@ -1,0 +1,85 @@
+.overlay, .vid-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:black;
+  transition: opacity 0.25s ease-out;
+  opacity: 0;
+  z-index: -2;
+
+  &.active {
+    z-index: 5;
+    opacity: 1;
+  }
+
+  &__bg {
+    position: fixed;
+    background: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    pre {
+      padding: 1.5rem 0;
+      line-height: 1.5;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  p {
+    &.show {
+      text-align: right;
+      //padding-top:0;
+    }
+  }
+}
+
+.overlay__module {
+  background: white;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 8rem;
+  position: relative;
+
+  button {
+    max-width: 9rem;
+    justify-content: center;
+    color:white;
+  }
+
+  .btn-subcopy {
+    padding: 1rem 0;
+    color: $primary-color;
+  }
+}
+
+.vid-overlay {
+  .overlay__module {
+    padding: 0;
+    width: 100%;
+    object-fit: cover;
+    //margin: 4rem;
+    width: 50%;
+  }
+}
+
+video::-webkit-media-controls-panel {
+	background-color: #000;
+}

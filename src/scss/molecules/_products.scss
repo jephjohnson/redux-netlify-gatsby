@@ -1,0 +1,74 @@
+.products {
+  display: flex;
+  margin-top: rem(72);
+
+  .product {
+    position: relative;
+
+    &__image {
+      min-height: 9rem;
+    }
+
+    p {
+
+      &.a-wide {
+        padding-bottom: rem(10); 
+      }
+
+      &:not(.a-wide, .type) {
+        padding-bottom: rem(20);
+      }
+
+      &.type {
+        text-transform: uppercase;
+      }
+    }
+
+    &__headline {
+      color: $secondary-color-3;
+    }
+  }
+}
+
+.products {
+  &__reflection {
+    width: 100%;
+    background: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 20rem;
+    bottom: rem(-45);
+  }
+}
+
+.products {
+  &__reflection {
+    width: 100%;
+    background: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 20rem;
+    bottom: rem(-45);
+  }
+}
+
+.products[data-type|="Lens Care"] { 
+  //display: none;
+  position: absolute;
+  opacity: 0;
+
+  .product__image {
+    min-height: 12rem;
+  }
+}
+
+.products {
+  transition: opacity 0.25s ease-out;
+  opacity: 0;
+  
+  &.active {
+    opacity: 1;
+  }
+}

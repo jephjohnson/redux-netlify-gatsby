@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import logger from 'redux-logger'
 import createHistory from 'history/createBrowserHistory'
 import { ConnectedRouter, routerMiddleware } from 'react-router-redux'
+import { Router } from 'react-router-dom';
 import reducer from "./src/reducers/"
 
 const history = createHistory()
@@ -19,9 +20,10 @@ exports.replaceRouterComponent = ({ history }) => {
 
 	const ConnectedRouterWrapper = ({ children }) => (
 		<Provider store={store}>
-			<ConnectedRouter history={history}>
+			{/* <ConnectedRouter history={history}>
 				{children}
-			</ConnectedRouter>
+			</ConnectedRouter> */}
+			<Router history={history}>{children}</Router>	
 		</Provider>
 	)
 

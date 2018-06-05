@@ -1,0 +1,38 @@
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Font Faces
+$base-font-family: 'MyriadPro-Regular', sans-serif;
+$base-font-light-family: 'MyriadPro-Light', sans-serif;
+$base-font-semibold-family: 'MyriadPro-Semibold', sans-serif;
+$base-font-bold-family: 'MyriadPro-Bold', sans-serif;
+
+// Heading and Paragraph Font Sizes
+$base-font-size-h1: rem(80); //80pt
+$base-font-size-h2: rem(60); //60pt
+$base-font-size-h3: rem(40); //40pt
+$base-font-size-h4: rem(24); //24pt
+$base-font-size-h5: rem(18); //18pt
+$base-font-size-primary: rem(16);
+$base-font-size-a-large: rem(18);
+$base-font-size-a-regular: rem(16);
+$base-font-size-a-wide: rem(18);
+$base-font-size-a-small: rem(14);
+$base-font-size-a-small-underline: rem(14);
+$base-font-size-a-small-wide: rem(14);
+
+//Colors
+$primary-color: #0460A9;
+$secondary-color-1: #EFEFF0;
+$secondary-color-2: #C1C1C1;
+$secondary-color-3: #00386B;
+$secondary-color-4: #00A4B2;
+
+//Padding, Spacing, Transforms, Etc
+// Config vars
+$kaldi-red: #FD461E;
+$kaldi-red-invert: #fff;
+
+$primary: $kaldi-red;
+$primary-invert: $kaldi-red-invert;

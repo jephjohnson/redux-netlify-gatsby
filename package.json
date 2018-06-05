@@ -5,6 +5,7 @@
   "author": "Austin Green",
   "dependencies": {
     "bulma": "^0.7.1",
+    "classnames": "^2.2.5",
     "gatsby": "^1.9.270",
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-netlify": "^1.0.19",
@@ -24,6 +25,7 @@
     "react": "^16.2.0",
     "react-helmet": "^5.2.0",
     "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
     "react-router-redux": "^4.0.8",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",

@@ -1,0 +1,125 @@
+.nav-overlay {
+  transition: all 0.5s ease-in;
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: black;
+  height: 100vh;
+  top: 0;
+  z-index: 5;
+  
+  &.collapsed {
+    opacity: 0;
+    z-index: 0;
+    //height: 0;
+  }
+}
+
+.primary-nav {
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    text-align: left;
+  }
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $base-font-bold-family;
+    color: $primary-color;
+  }
+  &__item {
+    display: inline;
+
+    &:nth-child(1), &:nth-child(2) {
+      &:after {
+        left: 0.5rem;
+        top: 0.65rem;
+        position: relative;
+        @include arrow(down, 0.35rem, $primary-color); 
+      }
+      &.active {
+        &:after {
+          top: -0.75rem;
+          @include arrow(up, 0.35rem, $primary-color); 
+        }
+      }
+    }
+  }
+}
+
+
+.mobile-menu {
+  width: 2rem;
+  height: 1.5rem;
+  position: relative;
+  margin: 0;
+  transform: rotate(0deg);
+  transition: rotate .2s ease-in-out;
+  cursor: pointer;
+  float: right;
+  display: block;
+  background-color: transparent;
+  border: none;
+  z-index: 1;
+  
+  span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: white;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: all .2s ease-in-out;
+
+    &:first-child {
+      transform: rotate(45deg);
+      top: 0;
+      left: 0;
+      transform-origin: left center;
+    }
+
+    &:nth-child(2) {
+      top: 10px;
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 22px;
+      left: 0;
+      transform-origin: left center;
+    }
+  }
+
+  &.collapsed {
+    span {
+      &:first-child {
+        top: 0;
+        transform: rotate(0);
+        left: 0;
+      }
+
+      &:nth-child(2) {
+        top: 10px;
+        opacity: 1;
+      }
+
+      &:nth-child(3) {
+        top: 20px;
+        transform: rotate(0);
+      }
+    }
+  }
+}
+
+.navbar {
+  background: black !important; 
+}
+
+

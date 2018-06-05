@@ -1,0 +1,31 @@
+.categories {
+  display: flex;
+}
+
+.category {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: rem(312);
+  width: 100%;
+  max-width:rem(216);
+  display: flex;
+  padding: rem(48);
+  text-align: center;
+
+  &__headline {
+    align-self: flex-end;
+    color: white;
+    margin: 0 auto;
+  }
+}
+
+.category__wrapper {
+  h3 {
+    background: $primary-color;;
+    padding: 1rem;
+    max-width: rem(750);
+    color: white;
+    text-align: center;
+  }
+}
+    
