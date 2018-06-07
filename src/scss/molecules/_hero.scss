@@ -70,9 +70,24 @@ video, #video-bg {
 
 
 
-//New 
+#outer__mover {
+  perspective: 25px;
+}
+
+#inner__mover {
+  width: 800px;
+  height: 600px;
+  box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+}
+
+
 .carousel {
-  perspective: 1500rem;
+  //perspective: 1500rem;
   text-align: center;
   
   &__dots {

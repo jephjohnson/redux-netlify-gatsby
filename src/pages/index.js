@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Carousel from "../components/slideshow/"
 
-
 export default class IndexPage extends React.Component {
+ 
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -12,10 +12,13 @@ export default class IndexPage extends React.Component {
     return (
       <section className="section">
         <div className="container">
+          
           <Carousel data={posts} />
+
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
           </div>
+
           {posts
             .map(({ node: post }) => (
               <div

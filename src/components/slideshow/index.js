@@ -4,6 +4,7 @@ import CN from 'classnames'
 import { connect } from "react-redux"
 import { bindActionCreators } from 'redux';
 import { increaseCounter, decreaseCounter, indexCounter} from '../../actions/counterAction'
+import MouseMove from '../Move.js';
 
 const mapStateToProps = (state) => ({ count: state.counter.count });
 const mapDispatchToProps = (dispatch) => bindActionCreators({increaseCounter, decreaseCounter, indexCounter}, dispatch)
@@ -13,6 +14,10 @@ class Carousel extends Component {
   
   constructor (props) {
     super(props)
+  }
+
+  componentDidMount() {
+    MouseMove.init();
   }
 
   onDotClick (index) {   
@@ -32,7 +37,10 @@ class Carousel extends Component {
       })
       
       return (
-        <img aria-hidden={!isShown} className={classNames} src={post.frontmatter.image} alt='sup' key={index} />
+        <div aria-hidden={!isShown} className={classNames} key={index} >
+          <img src={post.frontmatter.image} alt=''  />
+          <h1>{post.frontmatter.title}</h1>
+        </div>
       )
     })
   }
@@ -66,11 +74,11 @@ class Carousel extends Component {
   
   render () {
     return (    
-      <div className='carousel'>
-        <div className='carousel__slider'>
+      <div id="outer__mover" className='carousel'>
+        <div id="inner__mover" className='carousel__slider'>
           {this.renderSlides()}
+          {this.renderDots()}
         </div>
-        {this.renderDots()}
       </div>
     )
   }
