@@ -5,37 +5,39 @@ import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
 
 const Navbar = () => (
-  <nav className="navbar is-transparent">
-    <div className="container">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
-          <figure className="image">
-            <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-          </figure>
-        </Link>
-      </div>
-      <div className="navbar-start">
-        <Link className="navbar-item" to="/about">
-          About
-        </Link>
-        <Link className="navbar-item" to="/products">
-          Products
-        </Link>
-      </div>
-      <div className="navbar-end">
-        <a
-          className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="icon">
-            <img src={github} alt="Github" />
+
+
+  <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
+      <div className="container">
+        <div className="navbar-brand">
+          <Link to="/" className="navbar-item">
+            <figure className="image">
+              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+            </figure>
+          </Link>
+          <span className="navbar-burger burger" data-target="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
           </span>
-        </a>
+        </div>
+        <div id="navMenu" className="navbar-menu">
+          <div className="navbar-end">
+              <Link className="navbar-item" to="/about">
+              Work
+              </Link>
+              <Link className="navbar-item" to="/products">
+                Profile
+              </Link>
+          </div>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+
+
+  
+
+
 )
 
 export default Navbar
