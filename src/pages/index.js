@@ -24,12 +24,6 @@ export default class IndexPage extends React.Component {
           
           <Carousel data={posts} />
 
-          
-
-          {/* <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-          </div> */}
-
           {/* {posts
             .map(({ node: post }) => (
               <div
@@ -55,7 +49,7 @@ export default class IndexPage extends React.Component {
               </div>
             ))} */}
 
-            <div id="box1">Drag me</div>
+            <div id="box1"></div>
           <div className="wrapper">
           <div className="boxes">
             {posts
@@ -67,12 +61,6 @@ export default class IndexPage extends React.Component {
                 
               ))}
             </div>
-            {/* <div className="boxes">
-              <div className="box"><img src="https://unsplash.it/344/236?random=1" /></div>
-              <div className="box"><img src="https://unsplash.it/344/236?random=3" /></div>
-              <div className="box"><img src="https://unsplash.it/344/236?random=5" /></div>
-              <div className="box"><img src="https://unsplash.it/344/236?random=8" /></div>
-            </div> */}
           </div>
           <div id="viewport" className="viewport"></div>
 
