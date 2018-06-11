@@ -2,9 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Carousel from "../components/slideshow/"
+import Slider from '../components/Slider.js';
+
 
 export default class IndexPage extends React.Component {
- 
+  constructor (props) {
+    super(props)
+  }
+
+  componentDidMount() {
+    Slider.init();
+  }
+
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -15,11 +24,13 @@ export default class IndexPage extends React.Component {
           
           <Carousel data={posts} />
 
-          <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-          </div>
+          
 
-          {posts
+          {/* <div className="content">
+            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+          </div> */}
+
+          {/* {posts
             .map(({ node: post }) => (
               <div
                 className="content"
@@ -42,7 +53,30 @@ export default class IndexPage extends React.Component {
                   </Link>
                 </p>
               </div>
-            ))}
+            ))} */}
+
+            <div id="box1">Drag me</div>
+          <div className="wrapper">
+          <div className="boxes">
+            {posts
+              .map(({ node: post }) => (
+                
+                  <div className="box" key={post.id}>
+                    <img src={post.frontmatter.image} style={{ width: '10em', height: '10em' }}  alt=''  />
+                  </div>
+                
+              ))}
+            </div>
+            {/* <div className="boxes">
+              <div className="box"><img src="https://unsplash.it/344/236?random=1" /></div>
+              <div className="box"><img src="https://unsplash.it/344/236?random=3" /></div>
+              <div className="box"><img src="https://unsplash.it/344/236?random=5" /></div>
+              <div className="box"><img src="https://unsplash.it/344/236?random=8" /></div>
+            </div> */}
+          </div>
+          <div id="viewport" className="viewport"></div>
+
+
         </div>
       </section>
     )
