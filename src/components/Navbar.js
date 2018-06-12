@@ -14,17 +14,7 @@ const mapStateToProps = (state) => ({ hidden: state.toggle.hidden });
 const mapDispatchToProps = (dispatch) => bindActionCreators({...toggleactionCreators}, dispatch)
 
 class Navbar extends React.Component {
-  constructor(props) {
-    super(props)
-    // Bind the this context to the handler function
-    //this.handler = this.handler.bind(this);
-  }
-
-  // This method will be sent to the child component
-  // handler() {
-  //     console.log("here")
-  // }
-
+  
   toggleDiv() {
     this.props.toggleDiv();
   }
@@ -51,10 +41,9 @@ class Navbar extends React.Component {
                 <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
               </figure>
             </Link>
-   {/*<Hamburger action={this.handler} />*/}
             <Hamburger onClick={this.toggleDiv.bind(this)} className={CN('navbar-burger burger', {'is-active': hidden})} />
           </div>
-          <div id="navMenu" className="navbar-menu">
+          <div id="navMenu" onClick={this.toggleDiv.bind(this)} className={CN('navbar-menu', {'is-active': hidden})}>
             <div className="navbar-end">
               {Links}
             </div>
@@ -64,6 +53,5 @@ class Navbar extends React.Component {
     )
   }
 }
-//export default Navbar
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
 
