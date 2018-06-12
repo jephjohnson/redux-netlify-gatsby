@@ -49,12 +49,12 @@ export default class IndexPage extends React.Component {
               </div>
             ))} */}
 
-            <div id="box1"></div>
+          <div id="box1"></div>
           <div className="wrapper">
           <div className="boxes">
             {posts
               .map(({ node: post }) => (
-                
+                  
                   <div className="box" key={post.id}>
                     <img src={post.frontmatter.image} style={{ width: '10em', height: '10em' }}  alt=''  />
                   </div>

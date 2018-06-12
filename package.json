@@ -5,7 +5,7 @@
   "author": "Austin Green",
   "dependencies": {
     "bulma": "^0.7.1",
-    "classnames": "^2.2.5",
+    "classnames": "^2.2.6",
     "gatsby": "^1.9.270",
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-netlify": "^1.0.19",
