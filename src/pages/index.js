@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Carousel from "../components/slideshow/"
-import Slider from '../components/Slider.js';
+//import Slider from '../components/Slider.js';
 
 
 export default class IndexPage extends React.Component {
@@ -11,7 +11,10 @@ export default class IndexPage extends React.Component {
   }
 
   componentDidMount() {
-    Slider.init();
+    if (typeof window != "undefined") {
+      const Slider = require('../components/Slider.js');
+      Slider.init();
+    }
   }
 
   render() {

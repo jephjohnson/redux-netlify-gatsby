@@ -1,8 +1,8 @@
-import * as TweenLite from "gsap/umd/TweenLite";
-import * as TweenMax from "gsap/umd/TweenMax";
-import * as Modifiers from "gsap/umd/ModifiersPlugin"; 
-import * as Draggable from "gsap/umd/Draggable";
-import * as ThrowPropsPlugin from "gsap/umd/ThrowPropsPlugin";
+import TweenLite from "gsap/umd/TweenLite";
+import TweenMax from "gsap/umd/TweenMax";
+import Modifiers from "gsap/umd/ModifiersPlugin"; 
+import Draggable from "gsap/umd/Draggable";
+import ThrowPropsPlugin from "gsap/umd/ThrowPropsPlugin";
 
 var Slider = (function() {
   return {
@@ -13,7 +13,7 @@ var Slider = (function() {
         var $wrapper  = document.getElementsByClassName("wrapper");
         var $boxes    = document.getElementsByClassName("boxes");
         var $proxy    = document.getElementById("box1");
-
+        
         var numBoxes  = 3;  
         var boxWidth  = 500;
         var boxHeight = 250;  
