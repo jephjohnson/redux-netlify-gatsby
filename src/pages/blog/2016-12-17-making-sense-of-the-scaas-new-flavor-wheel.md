@@ -8,7 +8,7 @@ description: >-
 tags:
   - flavor
   - tasting
-image: /img/flavor_wheel.jpg
+image: /img/products-full-width.jpg
 ---
 
 ![flavor wheel](/img/flavor_wheel.jpg)
