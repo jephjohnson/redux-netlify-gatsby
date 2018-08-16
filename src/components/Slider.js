@@ -2,7 +2,7 @@ import TweenLite from "gsap/umd/TweenLite";
 import TweenMax from "gsap/umd/TweenMax";
 import Modifiers from "gsap/umd/ModifiersPlugin"; 
 import Draggable from "gsap/umd/Draggable";
-import ThrowPropsPlugin from "gsap/umd/ThrowPropsPlugin";
+import ThrowPropsPlugin from "../ThrowPropsPlugin";
 
 var Slider = (function() {
   return {
